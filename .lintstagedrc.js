@@ -23,5 +23,5 @@ const buildEslintCommand = async (filenames) => {
 
 module.exports = {
   "*.+(j|t)s?(x)": [buildEslintCommand],
-  "!(*.+(j|t)s?(x))": (file) => `prettier --write ${file}`,
+  "!(*.+(j|t)s?(x))": (file) => `prettier --write --ignore-unknown ${file}`,
 };
